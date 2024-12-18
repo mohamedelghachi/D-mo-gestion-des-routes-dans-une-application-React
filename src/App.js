@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useState } from "react";
+import CompteurF from "./CompteurF";
+import NameForm from "./NameForm";
+import ConsomApiFetch from "./ConsomApiFetch";
 
 function App() {
+  const [charge, setCharge] = useState(true);
+  var radios = [
+    { value: 1, text: "radio1" },
+    { value: 2, text: "radio2" },
+    { value: 3, text: "radio3", checked: true },
+    { value: 4, text: "radio4" },
+  ];
+  const numbers = [1, 2, 3, 4, 5];
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+        <ConsomApiFetch />
+    </>
   );
 }
 
